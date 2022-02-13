@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1200px" height="600px" style="border:1px solid black "  ></canvas>
+    <script>
+        let canvas = document.getElementById("myCanvas");
+        let ctx = canvas.getContext("2d");
+        ctx.fillStyle = "#00e600";
+        ctx.fillRect(150,150,400,400)
+
+        // Đường thứ nhất
+        ctx.beginPath(); //khai báo vẽ đường thẳng mới
+        ctx.moveTo(150,350); //xác định điểm bắt đầu
+        ctx.lineTo(550,350); //xác định điểm kết thúc
+        ctx.strokeStyle = "red"; //màu của đường thẳng
+        ctx.stroke(); //vẽ
+
+        //đường thứ 2
+        ctx.beginPath();
+        ctx.moveTo(350,150);
+        ctx.lineTo(350,550);
+        ctx.strokeStyle="red";
+        ctx.stroke();
+
+        // đường tròn
+        ctx.beginPath();
+        ctx.arc(90,50,40,0,2*Math.PI);
+        ctx.strokeStyle="blue";
+        ctx.stroke();
+    </script>
+</body>
+</html>
